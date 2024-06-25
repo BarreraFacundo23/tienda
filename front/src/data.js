@@ -1,0 +1,65 @@
+export const data = [
+	{
+		id: 1,
+		img: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/88410f24357049fe8064ad3000f30a3b_9366/Guantes_de_Arquero_Predator_Pro_Negro_GL4263_21_model.jpg',
+		nameProduct: 'Guantes de Arquero',
+		price: 200,
+		quantity: 1,
+	},
+	{
+		id: 2,
+		img: 'https://assets-es.imgfoot.com/media/cache/800x800/2022-2023-inter-home.jpg',
+		nameProduct: 'Camiseta Inter de Milan',
+		price: 450,
+		quantity: 1,
+	},
+	{
+		id: 3,
+		img: 'https://s3.sa-east-1.amazonaws.com/www.vaypol.com.ar/variants/z0a639nzhb5z96z8vpptkcplddj9/c77c2a06864ac9aca38dc5bd9371de015471edcdbf322dfb14411689bf968ae5',
+		nameProduct: 'Zapatillas Babolat',
+		price: 220,
+		quantity: 1,
+	},
+	{
+		id: 4,
+		img: 'https://mypadellife.com/cdn/shop/products/techveron_1511x1512.jpg?v=1669029109',
+		nameProduct: 'Racket Padel Babolat',
+		price: 600,
+		quantity: 1,
+	},
+	{
+		id: 5,
+		img: 'https://afaar.vtexassets.com/arquivos/ids/156638/IP8400_FC_eCom.jpg?v=638459540536700000',
+		nameProduct: 'Camiseta AFA Oficial',
+		price: 900, 
+		quantity: 1,
+	},
+	{
+		id: 6,
+		img: 'https://s3.sa-east-1.amazonaws.com/www.vaypol.com.ar/variants/9atrfosymgjjfptfzcab2bh7zgaq/c77c2a06864ac9aca38dc5bd9371de015471edcdbf322dfb14411689bf968ae5',
+		nameProduct: 'Camiseta AFA Arquero',
+		price: 850,
+		quantity: 1,
+	},
+	{
+		id: 7,
+		img:'https://www.basketballemotion.com/imagesarticulos/227997/grandes/camiseta-nike-los-angeles-lakers-statement-edition-2023-2024-nino-multicolor-0.webp',
+		nameProduct:'Camiseta Angeles Lakers',
+		price: 300,
+		quantity: 1,
+	},
+	{
+		id: 8,
+		img:'https://wilsonstore.mx/cdn/shop/files/871107d2-23ff-4181-82f8-a96e2c758c1f.jpg?v=1699074028&width=1500',
+		nameProduct:'Pelota de Tenis',
+		price:100,
+		quantity: 1,
+	},
+	{
+		id: 9,
+		img: 'https://http2.mlstatic.com/D_NQ_NP_945745-MLA50145838595_052022-O.webp',
+		nameProduct:'Pelota Qatar 2022',
+		price:200,
+		quantity: 1,
+	}
+];
