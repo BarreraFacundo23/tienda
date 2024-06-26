@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
+import axios from 'axios';
 import { useLocation, Link } from 'react-router-dom';
 
 const Ticket = () => {
@@ -13,6 +15,35 @@ const Ticket = () => {
   } else if (paymentMethod === 'efectivo') {
     adjustedTotal = initialTotal * 0.9; //10% descuento
   }
+
+  //MERCADO PAGO
+
+  const [preferenceid, setPreferenceId] = useState(null);
+
+	initMercadoPago("APP_USR-edd261c0-2179-4cb7-a063-fcade0a0801c", {
+    locale: "es-AR",
+  });
+
+	const createPreference = async(products) => {
+		try {
+			const response = await axios.post("http://localhost:3003/create_preference",
+      {items:products}
+       
+			);
+			
+			const { id } = response.data;
+			return id;
+		} catch (error){
+			console.log(error);
+		}
+	};
+
+	const handleBuy = async (products) => {
+     const id = await createPreference(products);
+	 if (id) {
+		setPreferenceId(id);
+	 }
+	};
 
   return (
     <div id="ticket-container">
@@ -29,15 +60,9 @@ const Ticket = () => {
         </ul>
         <h3>Total: ${adjustedTotal.toFixed(2)}</h3>
         <div>
-          <label htmlFor="payment-method">Método de Pago:</label>
-          <select
-            id="payment-method"
-            value={paymentMethod}
-            onChange={(e) => setPaymentMethod(e.target.value)}
-          >
-            <option value="efectivo">Efectivo</option>
-            <option value="tarjeta">Tarjeta</option>
-          </select>
+          <button onClick={()=>handleBuy(allProducts)}>Comprar</button>
+          {preferenceid && <Wallet initialization={{ preferenceid }} />}
+
         </div>
       </div>
       <div className="info-cliente">

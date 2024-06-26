@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Header } from './Header';
 import { ProductList } from './ProductList';
-import StarRating from './StarRating';
+import StarRating from './starrating';
 
 const Home = ({ allProducts, setAllProducts, total, setTotal, countProducts, setCountProducts }) => {
   const [comment, setComment] = useState('');

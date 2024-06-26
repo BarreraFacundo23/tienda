@@ -8,6 +8,7 @@ export const ProductList = ({
 	total,
 	setTotal,
 }) => {
+    
 	const onAddProduct = product => {
 		if (allProducts.find(item => item.id === product.id)) {
 			const products = allProducts.map(item =>
@@ -25,6 +26,7 @@ export const ProductList = ({
 		setAllProducts([...allProducts, product]);
 	};
 
+	
 	return (
 		<div className='container-items'>
 			{data.map(product => (
